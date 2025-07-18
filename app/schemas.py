@@ -27,6 +27,7 @@ class TransactionBase(BaseModel):
     description: Optional[str]
     date: date
     category_id: int
+    type: str
 
 class TransactionOut(TransactionBase):
     id: int

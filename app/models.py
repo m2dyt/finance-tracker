@@ -29,5 +29,6 @@ class Transaction(Base):
     created_at = Column(DateTime(timezone=True), server_default=func.now())
     user_id = Column(Integer, ForeignKey("users.id"))
     category_id = Column(Integer, ForeignKey("categories.id"))
+    type = Column(String(10), nullable=False, server_default="expense")
     owner = relationship("User", back_populates="transactions")
     category = relationship("Category", back_populates="transactions")
