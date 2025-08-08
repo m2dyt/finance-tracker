@@ -8,13 +8,13 @@ from fastapi.middleware.cors import CORSMiddleware
 app = FastAPI(title="Finance Tracker")
 
 origins = [
-    "http://localhost:3000",  # адрес твоего React-приложения
+    "http://localhost:3000",  
     "http://127.0.0.1:3000",
 ]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,  # разрешаем фронту доступ
+    allow_origins=origins,  
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
